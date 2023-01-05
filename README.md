@@ -1,14 +1,16 @@
-[![CI](https://github.com/HardHatOS/kernel-hardened/actions/workflows/kernel-hardened.yml/badge.svg)](https://github.com/noatsecure/kernel-hardened/actions/workflows/kernel-hardened.yml)
+[![CI](https://github.com/d4rklynk/kernel-hardened/actions/workflows/kernel-hardened.yml/badge.svg)](https://github.com/d4rklynk/kernel-hardened/actions/workflows/kernel-hardened.yml)
 
 # kernel-hardened
 
 ## About
-This repository tracks the hardened Linux kernel from the Arch Linux repositories ([link](https://archlinux.org/packages/extra/x86_64/linux-hardened)). This is performed using GitHub's continuous integration, where the `ci-kernel-hardened.py` script is ran every 3 hours to check for new updates. If there are any, then the `kernel-hardened.spec` file is automatically updated, triggering the Hard Hat Copr repository ([link](https://copr.fedorainfracloud.org/coprs/hardhatos/release)) to automatically start the build process for the latest version of Fedora Linux.
+This repository tracks the hardened Linux kernel from the Arch Linux repositories ([link](https://archlinux.org/packages/extra/x86_64/linux-hardened)). This is performed using GitHub's continuous integration, where the `ci-kernel-hardened.py` script is ran every 3 hours to check for new updates. If there are any, then the `kernel-hardened.spec` file is automatically updated, triggering the Hard Hat COPR repository ([link](https://copr.fedorainfracloud.org/coprs/samsepi0l/HardHatOS)) to automatically start the build process for the latest version of Fedora Linux.
+
+N.B : This repo exists as the original maintainer doesn't want to continue the project. This COPR exists only in case someday his COPR fails to build a version. For now, please use his package, not mine.
 
 ## Instructions
-All commands will need to be entered as the root user.
+All commands will need to be entered as the root user. (`su -`)
 
-1. Enable the Hard Hat Copr repository: `dnf copr enable hardhatos/release`
+1. Enable the Hard Hat Copr repository: `dnf copr enable samsepi0l/HardHatOS`
   
 2. Update the cache: `dnf update`
   
