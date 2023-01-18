@@ -8,7 +8,7 @@ This repository tracks the hardened Linux kernel from the Arch Linux repositorie
 *N.B: This repo exists as the original maintainer doesn't want to continue the project. This COPR exists only in case someday his COPR fails to build a version. For now, please use his package, not mine.*
 
 ## Instructions
-All commands will need to be entered as the root user. (`su -`)
+All commands will need to be entered with high privileges. (`sudo -i`)
 
 1. Enable the Hard Hat Copr repository: `dnf copr enable samsepi0l/HardHatOS`
   
