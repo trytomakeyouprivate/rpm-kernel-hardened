@@ -1,6 +1,6 @@
 [![CI](https://github.com/d4rklynk/kernel-hardened/actions/workflows/kernel-hardened.yml/badge.svg)](https://github.com/d4rklynk/kernel-hardened/actions/workflows/kernel-hardened.yml)
 
-[![build](https://copr.fedorainfracloud.org/coprs/samsepi0l/HardHatOS/package/kernel-hardened/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/g/samsepi0l/HardHatOS//package/kernel-hardened/status_image/last_build.png)
+[![Copr build status](https://copr.fedorainfracloud.org/coprs/samsepi0l/HardHatOS/package/kernel-hardened/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/samsepi0l/HardHatOS/package/kernel-hardened/)
 
 # kernel-hardened
 
