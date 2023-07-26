@@ -1,7 +1,7 @@
 BuildArch: x86_64
 BuildRequires: tar, zstd
 License: GPLv2 and Redistributable, no modification permitted
-Name: kernel-hardened
+Name: coreos-kernel-hardened
 Provides: installonlypkg(kernel-hardened)
 Release: 1%{?dist}
 Source0: https://europe.mirror.pkgbuild.com/extra/os/x86_64/linux-hardened-6.4.6.hardened1-1-x86_64.pkg.tar.zst
@@ -42,15 +42,15 @@ installonlypkgs="$(%{__grep} 'installonlypkgs' %{_dnfconf})";
 
 # If the line does not exist, then add it with a comment
 if [ -z "${installonlypkgs}" ]; then
-  echo "# The following line was added by the 'kernel-hardened' package from Hard Hat OS (HOS)" >> %{_dnfconf};
-  echo 'installonlypkgs=kernel-hardened' >> %{_dnfconf};
+  echo "# The following line was added by the 'coreos-kernel-hardened' package from SolidCore" >> %{_dnfconf};
+  echo 'installonlypkgs=coreos-kernel-hardened' >> %{_dnfconf};
 else
   # If the line already exists, then check if the package name has already been added
-  already_added="$(echo ${installonlypkgs} | %{__grep} 'kernel-hardened')";
+  already_added="$(echo ${installonlypkgs} | %{__grep} 'coreos-kernel-hardened')";
   # Check if the variable is empty. If so, then the package name will need to be added
   if [ -z "${already_added}" ]; then
     # Add the package name if it doesn't already exist for this option
-    %{__sed} -i s/"${installonlypkgs}"/"${installonlypkgs} kernel-hardened"/g %{_dnfconf};
+    %{__sed} -i s/"${installonlypkgs}"/"${installonlypkgs} coreos-kernel-hardened"/g %{_dnfconf};
   fi;
 fi;
 
@@ -59,7 +59,7 @@ fi;
 kernel-install remove %{_kerneldir}
 
 # Display an informational message to stdout that this package has modified the dnf.conf file
-echo -e "\nINFO: The %{_dnfconf} file was modified to add/include this package, 'kernel-hardened', to the option 'installonlypkgs'. Keeping this line will not harm your system, but you can remove it as it's no longer needed."
+echo -e "\nINFO: The %{_dnfconf} file was modified to add/include this package, 'coreos-kernel-hardened', to the option 'installonlypkgs'. Keeping this line will not harm your system, but you can remove it as it's no longer needed."
 
 %files
 %{_libmodules}/%{_kerneldir}
