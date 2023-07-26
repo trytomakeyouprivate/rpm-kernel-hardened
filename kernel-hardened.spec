@@ -1,11 +1,11 @@
 BuildArch: x86_64
 BuildRequires: tar, zstd
-License: GPLv2 and Redistributable, no modification permitted
+License: GPLv2
 Name: coreos-kernel-hardened
 Provides: installonlypkg(kernel-hardened)
 Release: 1%{?dist}
 Source0: https://europe.mirror.pkgbuild.com/extra/os/x86_64/linux-hardened-6.4.6.hardened1-1-x86_64.pkg.tar.zst
-Summary: The hardened linux kernel
+Summary: The hardened linux kernel for x86_64
 URL: https://github.com/SolidC0re/coreos-kernel-hardened
 Version: 6.4.6.1
 
