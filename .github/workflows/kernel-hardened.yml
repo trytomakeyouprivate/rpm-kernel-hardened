@@ -1,4 +1,4 @@
-# This workflow executes a Python script to check for new updates for the linux-hardened package within the Arch Linux repositories. If a new update has been found, then the script extractes the files, generates a git commit, and finally pushes the new changes to this repository.
+# This workflow executes a Python script to check for new updates for the linux-hardened package within the Arch Linux repositories. If a new update has been found, then the script extracts the files, generates a git commit, and finally pushes the new changes to this repository.
 name: CI
 
 # Controls when the workflow will run
@@ -9,9 +9,9 @@ on:
   #pull_request:
   #  branches: [ master ]
   #
-  # Triggers the workflow on every 0th, 3rd, 6th, 9th, 12th, 15th, 18th, and 21st hour
+  # Triggers the workflow on every 0th hour
   schedule:
-    - cron: "0 0,3,6,9,12,15,18,21 * * *"
+    - cron: "0 0 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,11 +31,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Update the .spec file to the latest linux-hardened kernel version
         env:
-          CI_COMMIT_AUTHOR: samsepi0l
-          CI_COMMIT_AUTHOR_EMAIL: contact@simpleprivacy.fr
+          CI_COMMIT_AUTHOR: SolidC0re
+          CI_COMMIT_AUTHOR_EMAIL: solidcore@tuta.io
         run: python3 ci-kernel-hardened.py kernel-hardened.spec
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script 
-      #  run: |
-      #    echo "Hello world!"
