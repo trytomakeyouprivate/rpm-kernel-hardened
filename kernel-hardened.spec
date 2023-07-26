@@ -6,7 +6,7 @@ Provides: installonlypkg(kernel-hardened)
 Release: 1%{?dist}
 Source0: https://europe.mirror.pkgbuild.com/extra/os/x86_64/linux-hardened-6.4.6.hardened1-1-x86_64.pkg.tar.zst
 Summary: The hardened linux kernel
-URL: https://github.com/d4rklynk/kernel-hardened
+URL: https://github.com/SolidC0re/coreos-kernel-hardened
 Version: 6.4.6.1
 
 %description
