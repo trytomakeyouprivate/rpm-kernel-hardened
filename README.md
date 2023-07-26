@@ -9,19 +9,21 @@ This repository tracks the hardened Linux kernel from the Arch Linux repositorie
 
 *N.B: This repo exists as the original creator doesn't want to continue the project. This Copr exists in a bid to keep SolidCore's packages under one banner.*
 
+
 ## Instructions
-To install on Fedora CoreOS/Silverblue/Kinoite/etc.
+### To install on Fedora CoreOS/Silverblue/Kinoite/etc.
 
 `rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:solidcore:coreos-kernel-hardened`
 
 
-To install on Fedora Server/Workstation:
+### To install on Fedora Server/Workstation:
 
 Enable the Hard Hat Copr repository: `dnf copr enable solidcore/coreos-kernel-hardened`
 
 Update the cache: `dnf update`
 
 Install the package: `dnf install coreos-kernel-hardened`
+
 
 ## Known Issues
 - If you boot into the hardened kernel at least once then the next time you boot into the vanilla Fedora kernel you will have to wait for SELinux to perform a full system relabel. Once the relabel is complete the system will reboot one last time, so make sure you choose the vanilla kernel again to avoid having to go through this process.
