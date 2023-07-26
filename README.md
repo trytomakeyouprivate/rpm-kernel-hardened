@@ -5,9 +5,7 @@
 # coreos-kernel-hardened
 
 ## About
-This repository tracks the hardened Linux kernel from the Arch Linux repositories ([link](https://archlinux.org/packages/extra/x86_64/linux-hardened)). This is performed using GitHub's continuous integration, where the `ci-kernel-hardened.py` script is run every 24 hours to check for new updates. If there are any, then the `kernel-hardened.spec` file is automatically updated, triggering the SolidCore COPR repository ([link](https://copr.fedorainfracloud.org/coprs/solidcore/coreos-kernel-hardened/)) to automatically start the build process for the latest version of Fedora Linux.
-
-*N.B: This repo exists as the original creator doesn't want to continue the project. This Copr exists in a bid to keep SolidCore's packages under one banner.*
+This repository tracks the hardened Linux kernel from the [Arch Linux repositories](https://archlinux.org/packages/extra/x86_64/linux-hardened). This is performed using GitHub's continuous integration, where the `ci-kernel-hardened.py` script is run every 24 hours to check for new updates. If there are any, then the `kernel-hardened.spec` file is automatically updated, triggering the [SolidCore copr repository](https://copr.fedorainfracloud.org/coprs/solidcore/coreos-kernel-hardened/) to automatically start the build process for the latest version of Fedora Linux.
 
 
 ## Instructions
@@ -27,3 +25,6 @@ Install the package: `dnf install coreos-kernel-hardened`
 
 ## Known Issues
 - If you boot into the hardened kernel at least once then the next time you boot into the vanilla Fedora kernel you will have to wait for SELinux to perform a full system relabel. Once the relabel is complete the system will reboot one last time, so make sure you choose the vanilla kernel again to avoid having to go through this process.
+
+## Acknowledgements
+Thanks to the team at [GrapheneOS](https://github.com/GrapheneOS/linux-hardened) for starting this project and the team at Arch Linux for [building on and maintaining it](https://github.com/anthraxx/linux-hardened). Huge thanks to the developer of [HardHatOS](https://github.com/HardHatOS) for creating the original repo and python scripts for creating the RPM builds, and for [d4rklynk](https://github.com/d4rklynk) for keeping it going.
