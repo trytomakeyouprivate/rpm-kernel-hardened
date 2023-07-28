@@ -3,12 +3,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  #push:
-  #  branches: [ master ]
-  #pull_request:
-  #  branches: [ master ]
-  #
   # Triggers the workflow on every 0th hour
   schedule:
     - cron: "0 0 * * *"
@@ -31,6 +25,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Update the .spec file to the latest linux-hardened kernel version
         env:
-          CI_COMMIT_AUTHOR: SolidC0re
+          CI_COMMIT_AUTHOR: solidc0re
           CI_COMMIT_AUTHOR_EMAIL: solidcore@tuta.io
         run: python3 ci-kernel-hardened.py kernel-hardened.spec
