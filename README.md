@@ -1,8 +1,8 @@
-[![CI](https://github.com/SolidC0re/coreos-kernel-hardened/actions/workflows/kernel-hardened.yml/badge.svg)](https://github.com/SolidC0re/coreos-kernel-hardened/actions/workflows/kernel-hardened.yml)
+[![CI](https://github.com/solidc0re/rpm-kernel-hardened/actions/workflows/rpm-kernel-hardened.yml/badge.svg)](https://github.com/solidc0re/rpm-kernel-hardened/actions/workflows/rpm-kernel-hardened.yml)
 
 [![Copr build status](https://copr.fedorainfracloud.org/coprs/solidcore/coreos-kernel-hardened/package/coreos-kernel-hardened/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/solidcore/coreos-kernel-hardened/package/coreos-kernel-hardened/)
 
-# coreos-kernel-hardened
+# rpm-kernel-hardened
 
 ## About
 This repository tracks the hardened Linux kernel from the [Arch Linux repositories](https://archlinux.org/packages/extra/x86_64/linux-hardened). This is performed using GitHub's continuous integration, where the `ci-kernel-hardened.py` script is run every 24 hours to check for new updates. If there are any, then the `kernel-hardened.spec` file is automatically updated, triggering the [SolidCore copr repository](https://copr.fedorainfracloud.org/coprs/solidcore/coreos-kernel-hardened/) to automatically start the build process for the latest version of Fedora Linux.
