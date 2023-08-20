@@ -25,6 +25,7 @@ Install the package: `dnf install coreos-kernel-hardened`
 
 ## Known Issues
 - If you boot into the hardened kernel at least once then the next time you boot into the vanilla Fedora kernel you will have to wait for SELinux to perform a full system relabel. Once the relabel is complete the system will reboot one last time, so make sure you choose the vanilla kernel again to avoid having to go through this process.
+- Flatpaks dont work: ([Arch Wiki entry](https://wiki.archlinux.org/title/Flatpak#Troubleshooting)). The linux-hardened kernel sets `kernel.unprivileged_userns_clone` to 0, so only privileged users can create new user namespaces. One method to fix this is to install `bubblewrap-suid`. This package provides a version of `bwrap(1)` with the setuid bit enabled, allowing bubblewrap elevate itself and create new namespaces. 
 
 ## Acknowledgements
 Thanks to the team at [GrapheneOS](https://github.com/GrapheneOS/linux-hardened) for starting this project and the team at Arch Linux for [building on and maintaining it](https://github.com/anthraxx/linux-hardened). Huge thanks to the developer of [HardHatOS](https://github.com/HardHatOS) for creating the original repo and python scripts for creating the RPM builds, and for [d4rklynk](https://github.com/d4rklynk) for keeping it going.
